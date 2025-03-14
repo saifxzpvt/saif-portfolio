@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saif's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="fontawesome.css">
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #000000;
+        color: rgb(255, 255, 255);
+        font-family: "Poppins", sans-serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 75px;
+        background-color: #0f0028;
+      }
+      /* Navigation Container */
+      .right {
+        display: flex;
+        justify-content: flex-end; /* Aligns menu to the right */
+        align-items: center; /* Center vertically */
+        margin-right: 30px; /* Space from the right edge */
+      }
+
+      /* Navigation List */
+      .right ul {
+        list-style: none; /* Removes bullet points */
+        display: flex; /* Aligns items horizontally */
+        gap: 30px; /* Space between menu items */
+        padding: 0;
+        margin: 0;
+      }
+
+      /* Navigation Links */
+      .right ul li a {
+        text-decoration: none; /* Removes underline */
+        font-size: 18px; /* Font size */
+        color: #9a9a9a; /* Default text color */
+        padding: 8px 16px; /* Padding for better click area */
+        border-radius: 8px; /* Rounded corners */
+        transition: all 0.3s ease; /* Smooth hover effect */
+      }
+
+      /* Hover Effect */
+      .right ul li a:hover {
+        background-color: #0f0028; /* Background on hover */
+        color: white; /* Text color on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+      }
+
+      /* Active/Current Page (Optional) */
+      .right ul li a.active {
+        background-color: #2a006d; /* Highlight current page */
+        color: white;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .right {
+          justify-content: center; /* Center items on smaller screens */
+        }
+
+        .right ul {
+          flex-direction: column; /* Stack links vertically */
+          gap: 15px; /* Smaller gap for mobile */
+        }
+
+        .right ul li a {
+          padding: 10px 20px; /* Larger touch area for mobile */
+        }
+      }
+
+      .left {
+        font-size: 1.5rem;
+      }
+      .firstsection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1vh 0;
+      }
+
+      @media (min-width: 768px) {
+        .firstsection {
+          flex-direction: row;
+          justify-content: space-around;
+        }
+      }
+      .leftsection {
+        font-size: 2rem;
+        padding: 30px;
+        text-align: center;
+      }
+
+      @media (min-width: 768px) {
+        .leftsection {
+          text-align: left;
+        }
+      }
+      .leftsection .btn {
+        padding: 12px;
+        background-color: #202020;
+        color: rgb(255, 255, 255);
+        border: 2px solid white;
+        border-radius: 6px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .leftsection .btn:hover {
+        color: #c4c4c4;
+        border: 2px #8b5cf6;
+        font-size: 18px;
+      }
+      .rightsection {
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+      }
+
+      @media (min-width: 768px) {
+        .rightsection {
+          justify-content: space-around;
+        }
+      }
+      #element {
+        color: #8b5cf6;
+      }
+      .name {
+        color: #8b5cf6;
+      }
+      .secondsection {
+        max-width: 90vw;
+        margin: auto;
+        height: 80vh;
+      }
+      .secondsection h1 {
+        color: #8b5cf6;
+        font-size: 1.6rem;
+      }
+      main hr {
+        border: 0;
+        background: #8b5cf6;
+        height: 1.3px;
+        margin: 20px 0;
+      }
+      .text-grey {
+        color: rgb(135, 135, 135);
+        font-size: small;
+      }
+      .secondsection .box {
+        background: whitesmoke;
+        width: 80vw;
+        height: 2px;
+        margin: 56px 0;
+        display: flex;
+      }
+      .secondsection .vertical {
+        height: 93px;
+        width: 1px;
+        background-color: rgb(255, 255, 255);
+        margin: 0 100px;
+      }
+      .image-top {
+        width: 35px;
+        position: relative;
+        top: -32px;
+        left: -9px;
+      }
+      .vertical-title {
+        display: flex;
+        position: relative;
+        top: 76px;
+        width: 150px;
+      }
+      .vertical-desc {
+        display: flex;
+        position: relative;
+        color: rgb(100, 100, 100);
+        width: 150px;
+        font-size: 9px;
+        top: 76px;
+      }
+      /* yahaa se mere appli aaa */
+
+      .container1 {
+        display: flex;
+        gap: 30px;
+      }
+
+      .box1 {
+        text-align: center;
+        width: 150px;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        text-decoration: none;
+        color: white;
+      }
+
+      .box1 i {
+        font-size: 40px;
+        margin-bottom: 15px;
+      }
+
+      /* Hover Effects */
+      .box1:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Individual Box Colors */
+      .instagram {
+        background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+      }
+
+      .github {
+        background: #333;
+      }
+
+      .email {
+        background: #4CAF50;
+      }
+
+      .telegram {
+        background: #0088cc;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 600px) {
+        .container1 {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      .footer {
+        display: flex;
+        margin: 35px;
+      }
+      footer {
+        background-color: #0f0028;
+      }
+      .footer > div {
+        width: 223px;
+      }
+      footer .text-center {
+        text-align: center;
+        color: #dfdfdf;
+        padding: 12px;
+      }
+      .contact-section {
+        padding: 50px 10px;
+        text-align: center;
+        font-size: 20px;
+      }
+
+      @media (min-width: 768px) {
+        .contact-section {
+          padding: 50px 20px;
+        }
+      }
+
+      .contact-section form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .social-buttons {
+        display: flex;
+        justify-content: right;
+        padding: 10px;
+        gap: 10px;
+        width: 100%;
+      }
+      .contact-section input,
+      .contact-section textarea {
+        width: 70%;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .contact-section button {
+        width: 20%;
+        font-size: 20px;
+        font-weight: 100;
+        border-color: aliceblue;
+        padding: 5px;
+      }
+      .contact-section button:hover {
+        font-size: 18px;
+      }
+      .btn {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(100, 100, 100, 0.614);
+        color: white;
+        padding: 5px 10px;
+        border: white;
+        border-radius: 5px;
+        margin: 10px;
+      }
+      .btn:hover {
+        background-color: rgb(150, 150, 150);
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Saif's Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="pages/About.html">About</a></li>
+            <li><a href="pages/Services.html">Services</a></li>
+            <li><a href="pages/Projects.html">Projects</a></li>
+            <li><a href="pages/Contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="firstsection">
+        <div class="leftsection">
+          <div>Hey! My name is <span class="name">Saif ali </span></div>
+          <div>and I am a passionate</div>
+          <span id="element"></span>
+          <div class="buttons">
+            <button class="btn" style="padding: 12px 20px;" onclick="window.location.href='resume.pdf'">
+              Download Resume
+            </button>
+            <button class="btn" style="padding: 12px 20px;" onclick="window.location.href='https://github.com/Saifxzpvt';">
+              Visit GitHub
+            </button>
+          </div>
+        </div>
+        <div class="rightsection">
+          <img src="pro.png" style="max-width: 100%; height: auto;" />
+        </div>
+      </section>
+      <hr />
+
+      <section class="secondsection">
+        <span class="text-grey">What I have done so far</span>
+        <h1>Past Experience</h1>
+        <div class="box">
+          <div class="vertical">
+            <img class="image-top" src="1.png" alt="BCA from DAVIM" />
+            <div class="vertical-title">PYTHON from DAV</div>
+            <div class="vertical-desc">
+              it was my first step into the world of programming. During this
+              time, I became familiar with basic concepts like variables, loops,
+              and conditionals, which laid the foundation for more advanced
+              topics. I also explored object-oriented programming (OOP), file
+              handling, and working with libraries. Learning Python improved my
+              problem-solving skills and sparked my interest in software
+              development. This experience has been invaluable as I continue to
+              expand my knowledge in full-stack development. (2019-2021)
+            </div>
+          </div>
+
+          <div class="vertical">
+            <img class="image-top" src="1.png" alt="Academic Projects" />
+            <div class="vertical-title">PYTHON PROJECTS</div>
+            <div class="vertical-desc">
+              1. password creator App - A simple application that suggest
+              password by taking length input from user. 2. currency exchange
+              App - A simple application that convert currency by taking amount
+              and currency input from user. 3. chatbot App - A simple small
+              application that chat with user by taking input from user. (2021-2022)
+            </div>
+          </div>
+
+          <div class="vertical">
+            <img class="image-top" src="1.png" alt="Technical Skills" />
+            <div class="vertical-title">BCA from DAVIM</div>
+            <div class="vertical-desc">
+              I pursued my Bachelor of Computer Applications (BCA) from DAV
+              Institute of Management (DAVIM), where I gained a strong
+              foundation in computer science and information technology.
+              Throughout the course, I learned essential programming languages
+              like Java, Python, and web development technologies such as HTML,
+              CSS, and JavaScript. The curriculum covered key areas like
+              database management, software engineering, and networking, which
+              enhanced my technical skills and problem-solving abilities.(2022-2025)
+            </div>
+          </div>
+
+          <div class="vertical">
+            <img class="image-top" src="1.png" alt="Personal Projects" />
+            <div class="vertical-title">PERSONAL PROJECTS</div>
+            <div class="vertical-desc">
+              Weather App: Built a JavaScript-based application that fetches
+              real-time weather data using APIs. To-Do List App: Developed a
+              simple and interactive to-do list application with features for
+              adding, deleting, and organizing tasks.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="container1">
+      <!-- Instagram Box -->
+      <a href="https://instagram.com/saif.dvv" target="_blank" class="box1 instagram">
+          <i class="fab fa-instagram"></i>
+          <p>Instagram</p>
+      </a>
+
+      <!-- GitHub Box -->
+      <a href="https://github.com/Saifxzpvt" target="_blank" class="box1 github">
+          <i class="fab fa-github"></i>
+          <p>GitHub</p>
+      </a>
+
+      <!-- Email Box -->
+      <a href="isaifalipvt@email.com" class="box1 email">
+          <i class="fas fa-envelope"></i>
+          <p>Email</p>
+      </a>
+
+      <!-- Telegram Box -->
+      <a href="https://t.me/Saifxzpvt" target="_blank" class="box1 telegram">
+          <i class="fab fa-telegram-plane"></i>
+          <p>Telegram</p>
+      </a>
+    </div>
+
+    <footer>
+      <div class="footer">
+        <div class="footer-first">
+          <h2>Saif's Developer Portfolio //</h2>
+         </div>
+      </div>
+      <section id="contact" class="contact-section">
+        <h2>Contact Me!</h2>
+        <p>
+          Feel free to reach out if you're looking for a developer or have any
+          questions about my work.
+        </p>
+        <form action="https://formspree.io/f/meoaqpgv" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit" class="btn">SEND</button>
+        </form>
+      </section>
+      <div class="text-center">
+        www.Saifsportfolio.com | © 2024 All Rights Reserved.
+      </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "web Developer",
+          "Graphic Designer",
+          "Web Designer",
+          "Full Stack Developer",
+        ],
+        typeSpeed: 50,
+      });
+    </script>
+  </body>
+</html>

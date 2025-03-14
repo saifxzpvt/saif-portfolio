@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #000000;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0f0028;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #d4edda;
+        }
+        
+      .back-button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 20px 0;
+        background-color: #000000;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      .back-button:hover {
+        background-color: #28005a;
+        
+      }
+
+      
+      .services-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+        }
+
+        .service-card {
+            background: rgb(20, 20, 20);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card h2 {
+            color: #fdfdfd;
+        }
+
+        .service-card p {
+            font-size: 16px;
+        }
+
+        /* Contact Form Container */
+        .contact-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .contact-container h2 {
+            text-align: center;
+            color: #0f0028;
+            margin-bottom: 20px;
+        }
+
+        .call-btn {
+            display: inline-block;
+            padding: 12px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #0f0028;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .call-btn:hover {
+            background-color: #23005a;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        .submit-btn {
+            display: inline-block;
+            background: #0f0028;
+            color: white;
+            padding: 12px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #2b0071;
+        }
+
+        /* Back to Home Button */
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            text-align: center;
+            color: white;
+            background: #0f0028;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .home-btn:hover {
+            background-color: #270361;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0f0028;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Contact Me</h1>
+        <nav>
+            <a href="About.html">About Me</a>
+            <a href="Services.html">Services</a>
+            <a href="Projects.html">Projects</a>
+        </nav>
+        <a href="../index.html" class="back-button">Back to Home</a>
+    </header>
+
+    <section class="services-container">
+
+        <div class="service-card">
+            <h2>CALL</h2>
+            <button class="call-btn" onclick="window.location.href='tel:+919818306650';">
+                📞
+            </button>
+        </div>
+
+        <div class="service-card">
+            <h2>MAIL</h2>
+            <button class="call-btn"  onclick="window.location.href='mailto:isaifalipvt@gmail.com';">
+                📨
+            </button>
+
+
+        </div>
+
+        <div class="service-card">
+            <h2>WHATSAPP</h2>
+            <button  class="call-btn" onclick="location.href='https://wa.me/919818306650';">
+                📱
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-container">
+        <h2>Get In Touch</h2>
+        <form action="https://formspree.io/f/meoaqpgv" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+        <!-- Home Button -->
+        <div style="text-align: center;">
+            <a href="index.html" class="home-btn">Back to Home</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        © 2025 Saif | Aspiring Full-Stack Developer
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me - Saif</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #000000;
+        color: #dedede;
+        line-height: 1.6;
+      }
+      header {
+        background: #0f0028;
+        color: white;
+        padding: 1.5rem 0;
+        text-align: center;
+      }
+      nav {
+        margin-top: 10px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: white;
+        margin: 0 15px;
+        font-size: 18px;
+        transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: #898989;
+      }
+      .container {
+        width: 90%;
+        max-width: 1100px;
+        margin: 2rem auto;
+      }
+      .about-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .about-section img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+      }
+      .about-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .about-section p {
+        max-width: 700px;
+      }
+      .projects {
+        margin-top: 3rem;
+      }
+      .projects h2 {
+        font-size: 2rem;
+        text-align: center;
+      }
+      .project-card {
+        color: black;
+        background: white;
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1.5rem;
+        transition: transform 0.3s;
+      }
+      .project-card:hover {
+        transform: translateY(-5px);
+      }
+      .footer {
+        text-align: center;
+        padding: 1rem;
+        background: #0f0028;
+        color: white;
+      }
+      .back-button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 20px 0;
+        background-color: #000000;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      .back-button:hover {
+        background-color: #28005a;
+      }
+      .img{
+        width: 70%;
+        height: 80vh;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>About Me</h1>
+      <nav>
+        <a href="Services.html">Services</a>
+        <a href="Projects.html">Projects</a>
+        <a href="Contact.html">Contact</a>
+      </nav>
+      <a href="../index.html" class="back-button">Back to Home</a>
+    </header>
+
+    <div class="container">
+      <section class="about-section">
+        <img  class="img" src="me.jpg" alt="my Photo";" />
+        <h1 style="font-size: 2rem;">Hi, I'm Saif ali!</h1>
+        <p style="font-size: 1.1rem;">
+          I'm a software developer with a passion for building innovative and
+          user-friendly applications.
+        </p>
+        <p style="font-size: 1.1rem;">
+          I was born in 2005, and my journey into the world of technology began
+          in 2020. From the moment I wrote my first lines of code, I was
+          captivated by the endless possibilities that technology offers. Since
+          then, I have been continuously expanding my skills and knowledge,
+          evolving from a curious learner to an aspiring full-stack developer. I
+          specialize in frontend development, crafting clean and responsive user
+          interfaces using HTML, CSS, and JavaScript, while also exploring the
+          backend with Java to build robust and scalable applications. My tech
+          toolkit also includes Python, which I’ve used to develop practical
+          projects like a currency converter, a password suggester, and even a
+          small chatbot that responds to specific inputs. Beyond coding, I have
+          a keen eye for UI/UX design, creating intuitive and user-friendly
+          prototypes using Figma, and I efficiently manage projects using Git
+          for version control. I am passionate about learning, problem-solving,
+          and turning ideas into real-world applications. With every project, I
+          aim to enhance my skills, stay updated with industry trends, and take
+          steps toward becoming a proficient full-stack developer. My goal is to
+          create innovative solutions that make a difference and push the
+          boundaries of what's possible in the digital world.
+        </p>
+        <p>
+          I am an enthusiastic frontend developer with a solid grasp of HTML,
+          CSS, and JavaScript, focused on building responsive, user-friendly,
+          and visually appealing web applications. Currently, I am expanding my
+          skill set by learning backend development with Java, aiming to become
+          a full-stack developer. I have worked on several projects that have
+          improved my ability to write clean, optimized code and implement
+          modern web practices. My design process is enhanced by my proficiency
+          in Figma, allowing me to create wireframes, prototypes, and UI/UX
+          designs that deliver seamless user experiences. I also have a strong
+          understanding of Git, ensuring smooth version control, collaboration,
+          and code management throughout the development cycle. I am passionate
+          about problem-solving, continuous learning, and staying up-to-date
+          with emerging technologies. I enjoy taking on new challenges and am
+          committed to improving both my frontend and backend skills to deliver
+          scalable and efficient solutions.
+        </p>
+      </section>
+
+      <section class="projects">
+        <h2 style="font-size: 2rem;">My Projects</h2>
+
+        <div class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>
+            Built a responsive personal portfolio showcasing my skills and
+            projects using HTML, CSS, and JavaScript you can see also
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>Todo List App</h3>
+          <p>
+            Developed a dynamic to-do list app with JavaScript, allowing users
+            to add, update, and delete tasks.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>Weather App</h3>
+          <p>
+            Created a weather application using APIs to fetch real-time weather
+            data based on user location.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>Currency exchange app (python)</h3>
+          <p>
+            I developed a Currency Exchange application using Python that allows
+            users to convert currencies accurately and efficiently. The
+            application fetches real-time exchange rates from reliable sources,
+            ensuring up-to-date currency conversions. It features a
+            user-friendly interface where users can select different currencies,
+            input amounts, and instantly view the converted value. The project
+            highlights my skills in Python programming, API integration, and
+            data handling. I implemented error handling to manage invalid inputs
+            and ensure smooth user interactions. This project not only
+            strengthened my understanding of data manipulation and external API
+            usage but also improved my ability to develop practical, real-world
+            applications.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>Password suggestor app (python)</h3>
+          <p>
+            I developed a Password Suggester application using Python that
+            generates strong and secure passwords based on user-defined input
+            length. This project focuses on enhancing user security by creating
+            randomized passwords with a mix of uppercase letters, lowercase
+            letters, numbers, and special characters. Users can specify their
+            desired password length, and the application ensures the password
+            meets modern security standards for better protection against
+            unauthorized access. Through this project, I strengthened my skills
+            in Python programming, including working with random libraries,
+            handling user inputs, and implementing logical conditions. It
+            reflects my ability to build practical applications and highlights
+            my focus on user-centric and secure software solutions.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>Chatbot (python)</h3>
+          <p>
+            I developed a small chatbot application using Python that interacts
+            with users by responding to specific inputs. The chatbot is designed
+            to recognize predefined keywords and phrases, delivering accurate
+            and relevant replies. Through this project, I gained hands-on
+            experience in handling user input, implementing conditional logic,
+            and improving the chatbot's ability to process text-based
+            communication. This project enhanced my understanding of Python
+            programming, string manipulation, and control flow while offering
+            insight into building interactive applications. I aim to expand its
+            functionality by integrating advanced responses and enhancing the
+            user experience further.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <div class="footer">
+      <p>© 2025 Saif | Aspiring Full-Stack Developer </p>
+    </div>
+  </body>
+</html>
