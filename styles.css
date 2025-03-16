@@ -2,11 +2,13 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   background-color: #000000;
   color: rgb(255, 255, 255);
   font-family: "Poppins", sans-serif;
 }
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -14,6 +16,7 @@ nav {
   height: 75px;
   background-color: #0f0028;
 }
+
 /* Navigation Container */
 /* Default Navigation Links */
 .right ul li a {
@@ -60,30 +63,36 @@ nav {
   .menu-icon {
     display: block;
   }
+
   .right ul {
     display: none;
     flex-direction: column;
     position: absolute;
     top: 50px;
     right: 0;
-    background-color: #ffffff;
-    width: 100%; /* Changed width to 100% for better mobile view */
+    background-color: #0f0028;
+    width: 100%;
+    /* Changed width to 100% for better mobile view */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     text-align: center;
   }
+
   .right ul.active {
     display: flex;
   }
+
   .right ul li {
     padding: 10px;
-    font-size: 16px; /* Adjusted font size for better readability */
+    font-size: 16px;
+    /* Adjusted font size for better readability */
   }
 }
 
 .left {
   font-size: 1.5rem;
 }
+
 .firstsection {
   display: flex;
   flex-direction: column;
@@ -93,7 +102,8 @@ nav {
 
 @media (max-width: 600px) {
   .firstsection {
-    padding: 20px; /* Added padding for better spacing on mobile */
+    padding: 20px;
+    /* Added padding for better spacing on mobile */
   }
 }
 
@@ -103,6 +113,7 @@ nav {
     justify-content: space-around;
   }
 }
+
 .leftsection {
   font-size: 2rem;
   padding: 30px;
@@ -114,6 +125,7 @@ nav {
     text-align: left;
   }
 }
+
 .leftsection .btn {
   padding: 12px;
   background-color: #202020;
@@ -123,11 +135,13 @@ nav {
   font-size: 20px;
   cursor: pointer;
 }
+
 .leftsection .btn:hover {
   color: #c4c4c4;
   border: 2px #8b5cf6;
   font-size: 18px;
 }
+
 .rightsection {
   justify-content: center;
   align-items: center;
@@ -139,17 +153,22 @@ nav {
     justify-content: space-around;
   }
 }
+
 #element {
   color: #8b5cf6;
 }
+
 .name {
   color: #8b5cf6;
 }
+
 .secondsection {
   max-width: 90vw;
   margin: auto;
-  height: auto; /* Changed height to auto for better mobile view */
+  height: auto;
+  /* Changed height to auto for better mobile view */
 }
+
 .secondsection h1 {
   color: #8b5cf6;
   font-size: 1.6rem;
@@ -161,10 +180,12 @@ main hr {
   height: 1.3px;
   margin: 20px 0;
 }
+
 .text-grey {
   color: rgb(135, 135, 135);
   font-size: small;
 }
+
 .container1 {
   display: flex;
   flex-direction: row;
@@ -177,46 +198,97 @@ main hr {
   max-width: 90vw;
   margin: 5pc;
   height: auto;
-  background: linear-gradient(to right, #0f0027, #1a002b); /* New background */
-  padding: 40px; /* Added padding */
-  border-radius: 10px; /* Rounded corners */
+  background: linear-gradient(to right, #0f0027, #1a002b);
+  /* New background */
+  padding: 40px;
+  /* Added padding */
+  border-radius: 10px;
+  /* Rounded corners */
   box-shadow: 1 4px 10px #c4c4c4;
 }
-.secondsection :hover{
-  background: linear-gradient(to right, #0f0027, #25003d94);
+
+.secondsection :hover {
+  background: linear-gradient(to right, #0f0027, #0d001794);
 }
+
 .secondsection h1 {
-  color: #ffffff; /* Changed heading color */
-  font-size: 2.5rem; /* Increased font size */
-  margin-bottom: 20px; /* Spacing below heading */
+  color: #ffffff;
+  /* Changed heading color */
+  font-size: 2.5rem;
+  /* Increased font size */
+  margin-bottom: 20px;
+  /* Spacing below heading */
 }
+
 .experience {
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  background: rgba(255, 255, 255, 0.1);
+  /* Semi-transparent background */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow */
-  margin-bottom: 20px; /* Spacing between experience entries */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* Box shadow */
+  margin-bottom: 20px;
+  /* Spacing between experience entries */
 }
+
 .experience h2 {
-  color: #8b5cf6; /* Title color */
-  font-size: 1.8rem; /* Title font size */
+  color: #8b5cf6;
+  /* Title color */
+  font-size: 1.8rem;
+  /* Title font size */
 }
+
 .experience p {
-  color: #ffffff; /* Description color */
+  color: #ffffff;
+  /* Description color */
 }
+
 .experience .date {
-  color: rgb(135, 135, 135); /* Date color */
-  font-size: small; /* Date font size */
+  color: rgb(135, 135, 135);
+  /* Date color */
+  font-size: small;
+  /* Date font size */
 }
 
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .experience {
+    width: 100%;
+    /* Adjust width to fit the screen */
+    max-width: 100%;
+    /* Prevent overflow */
+    padding: 15px;
+    /* Ensure proper spacing */
+    font-size: 14px;
+    /* Adjust font size for smaller screens */
+    word-wrap: break-word;
+    /* Prevent text from overflowing */
+    overflow: hidden;
+    /* Hide any excess content */
+  }
+
   .secondsection {
+    width: 93%;
+    /* Adjust width to fit the screen */
+    max-width: 100%;
+    /* Prevent overflow */
+    padding: 19px;
+    /* Ensure proper spacing */
+    font-size: 12px;
+    /* Adjust font size for smaller screens */
+    word-wrap: break-word;
+    /* Prevent text from overflowing */
+    overflow: hidden;
+    /* Hide any excess content */
+    margin: 0;
+    display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 }
+
 
 .box1 {
   text-align: center;
@@ -258,10 +330,15 @@ main hr {
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 780px) {
   .container1 {
     flex-direction: column;
+    display: flex;
     align-items: center;
+    gap: 80px;
+    margin: 0 auto;
+    margin-top: 20px;
+
   }
 }
 
@@ -269,17 +346,21 @@ main hr {
   display: flex;
   margin: 35px;
 }
+
 footer {
   background-color: #0f0028;
 }
-.footer > div {
+
+.footer>div {
   width: 223px;
 }
+
 footer .text-center {
   text-align: center;
   color: #dfdfdf;
   padding: 12px;
 }
+
 .contact-section {
   padding: 50px 10px;
   text-align: center;
@@ -306,10 +387,13 @@ footer .text-center {
   gap: 10px;
   width: 100%;
 }
+
 .contact-section input,
 .contact-section textarea {
-  width: 90%; /* Changed width to 90% for better mobile view */
-  padding: 15px; /* Adjusted padding for better usability */
+  width: 90%;
+  /* Changed width to 90% for better mobile view */
+  padding: 15px;
+  /* Adjusted padding for better usability */
   border: 1px solid #ddd;
   border-radius: 5px;
 }
@@ -321,9 +405,11 @@ footer .text-center {
   border-color: aliceblue;
   padding: 5px;
 }
+
 .contact-section button:hover {
   font-size: 18px;
 }
+
 .btn {
   display: flex;
   justify-content: center;
@@ -334,6 +420,7 @@ footer .text-center {
   border-radius: 5px;
   margin: 10px;
 }
+
 .btn:hover {
   background-color: rgb(150, 150, 150);
   font-size: 14px;
