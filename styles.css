@@ -273,7 +273,7 @@ main hr {
     /* Adjust width to fit the screen */
     max-width: 100%;
     /* Prevent overflow */
-    padding: 19px;
+    padding: 15px;
     /* Ensure proper spacing */
     font-size: 12px;
     /* Adjust font size for smaller screens */
