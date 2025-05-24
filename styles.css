@@ -17,6 +17,14 @@ nav {
   background-color: #0f0028;
 }
 
+#navMenu li a:hover {
+  color: white;
+  background-color: #7f3eff;
+  transform: scale(1.1);     
+  border-radius: 5px;  
+}
+
+
 /* Navigation Container */
 /* Default Navigation Links */
 .right ul li a {

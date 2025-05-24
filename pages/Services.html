@@ -11,11 +11,11 @@
             padding: 0;
             box-sizing: border-box;
             background-color: #000000;
-            color: #807f7f;
+            color: #c0c0c0;
             line-height: 1.6;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Ensure body takes full height */
+            min-height: 100vh;
         }
 
         header {
@@ -51,37 +51,37 @@
             justify-content: center;
             flex-wrap: wrap;
             padding: 40px 20px;
-            flex: 1; /* Allow this section to grow */
+            flex: 1;
         }
 
         .service-card {
             background: rgba(255, 255, 255, 0.075);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             padding: 20px;
             margin: 20px;
             width: 300px;
             text-align: center;
-            box-shadow: 0 8px 8px #98989898;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease;
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-10px) scale(1.03);
         }
 
         .service-card h2 {
-            color: #fdfdfd;
+            color: #ffffff;
+            margin-bottom: 10px;
         }
 
         .service-card p {
-            font-size: 16px;
+            font-size: 15px;
+            color: #d0d0d0;
         }
 
-        /* Home Button */
         .home-btn {
             display: inline-block;
-            padding: 8px 7px;
+            padding: 8px 12px;
             background-color: #000000;
             color: white;
             text-decoration: none;
@@ -98,9 +98,8 @@
             padding: 20px;
             background: #0f0028;
             color: white;
-            margin-top: auto; /* Push footer to the bottom */
+            margin-top: auto;
         }
-
     </style>
 </head>
 
@@ -110,48 +109,53 @@
     <header>
         <h1>My Services</h1>
         <nav>
+            <a href="../index.html">Home</a>
             <a href="about.html">About Me</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
         </nav>
-        
-    <!-- Home Button -->
-    <div class="home-btn" style="text-align: center; margin: 20px;">
-        <a href="../index.html" class="home-btn">Back to Home</a>
-    </div>
     </header>
 
     <!-- Services Section -->
     <section class="services-container">
 
         <div class="service-card">
-            <h2>Frontend Development</h2>
-            <p>Creating responsive, user-friendly websites using HTML, CSS, and JavaScript with a focus on clean design.</p>
+            <h2>Full-Stack Web Development</h2>
+            <p>Building responsive and interactive web applications using HTML, CSS, JavaScript, and Java for a seamless frontend and backend experience.</p>
         </div>
 
         <div class="service-card">
-            <h2>Backend Development</h2>
-            <p>Building secure and scalable backend systems using Java and exploring full-stack development solutions.</p>
+            <h2>REST API Integration</h2>
+            <p>Creating and integrating RESTful APIs to enable communication between front-end interfaces and backend services for dynamic apps.</p>
         </div>
 
         <div class="service-card">
-            <h2>UI/UX Design</h2>
-            <p>Designing modern, user-centric interfaces and prototypes using Figma for an enhanced user experience.</p>
+            <h2>Database Design</h2>
+            <p>Designing and managing databases using MySQL or MongoDB, including data modeling, queries, and relationships to power applications.</p>
         </div>
 
         <div class="service-card">
-            <h2>Version Control</h2>
-            <p>Efficiently managing codebases and collaborating using Git and GitHub for version control and teamwork.</p>
+            <h2>UI/UX Prototyping</h2>
+            <p>Crafting intuitive user interfaces and experiences using Figma — from wireframes to pixel-perfect designs focused on usability.</p>
+        </div>
+
+        <div class="service-card">
+            <h2>Code Collaboration</h2>
+            <p>Using Git and GitHub for source control, team collaboration, and maintaining clean commit histories across personal and team projects.</p>
+        </div>
+
+        <div class="service-card">
+            <h2>Security Awareness</h2>
+            <p>Foundational knowledge of cybersecurity concepts, preparing for future roles in ethical hacking and bug bounty hunting.</p>
         </div>
 
     </section>
 
-
     <!-- Footer Section -->
     <footer>
-        © 2025 Saif | Aspiring Full-Stack Developer
+        © 2025 Saif | Aspiring Full-Stack Developer & Cybersecurity Learner
     </footer>
-    
+
 </body>
 
 </html>
