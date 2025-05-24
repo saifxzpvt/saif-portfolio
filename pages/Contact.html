@@ -1,271 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Contact Me</title>
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #000000;
-            color: #333;
-            line-height: 1.6;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        header {
-            background: #0f0028;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
 
-        h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
+    header {
+      background: #0f0028;
+      text-align: center;
+      padding: 20px;
+    }
 
-        nav {
-            margin-top: 10px;
-        }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
 
-        nav a {
-            text-decoration: none;
-            color: white;
-            margin: 0 15px;
-            font-size: 18px;
-            transition: color 0.3s ease;
-        }
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      margin: 0 10px;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
 
-        nav a:hover {
-            color: #d4edda;
-        }
-        
-      .back-button {
-        display: inline-block;
-        padding: 10px 20px;
-        margin: 20px 0;
-        background-color: #000000;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s;
+    nav a:hover {
+      color: #d4edda;
+    }
+
+    .services-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .service-card {
+      background: #111;
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      background: #1a1a1a;
+    }
+
+    .service-card h2 {
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .call-btn {
+      padding: 12px 20px;
+      font-size: 20px;
+      background-color: #0f0028;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .call-btn:hover {
+      background-color: #2b0071;
+    }
+
+    .contact-container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 25px;
+      background: #fff;
+      color: #000;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #0f0028;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    textarea {
+      height: 150px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      display: inline-block;
+      background: #0f0028;
+      color: white;
+      padding: 12px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #2b0071;
+    }
+
+    .home-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #0f0028;
+      color: white;
+      padding: 10px 20px;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .home-btn:hover {
+      background-color: #270361;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0f0028;
+      color: white;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
       }
-      .back-button:hover {
-        background-color: #28005a;
-        
+
+      nav a {
+        display: block;
+        margin: 10px 0;
       }
 
-      
       .services-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 40px 20px;
-        }
+        flex-direction: column;
+        align-items: center;
+      }
 
-        .service-card {
-            background: rgb(255, 255, 255);
-            background-color: #000000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px;
-            width: 300px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
+      .service-card {
+        width: 90%;
+      }
+    }
 
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .service-card h2 {
-            color: #fdfdfd;
-        }
-
-        .service-card p {
-            font-size: 16px;
-        }
-
-        /* Contact Form Container */
-        .contact-container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-
-        .contact-container h2 {
-            text-align: center;
-            color: #0f0028;
-            margin-bottom: 20px;
-        }
-
-        .call-btn {
-            display: inline-block;
-            padding: 12px 20px;
-            font-size: 18px;
-            color: white;
-            background-color: #0f0028;
-            text-decoration: none;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .call-btn:hover {
-            background-color: #23005a;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-
-        textarea {
-            resize: vertical;
-            height: 150px;
-        }
-
-        .submit-btn {
-            display: inline-block;
-            background: #0f0028;
-            color: white;
-            padding: 12px 20px;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            background: #2b0071;
-        }
-
-        /* Back to Home Button */
-        .home-btn {
-            display: inline-block;
-            margin-top: 20px;
-            text-align: center;
-            color: white;
-            background: #0f0028;
-            padding: 10px 20px;
-            font-size: 18px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-
-        .home-btn:hover {
-            background-color: #270361;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #0f0028;
-            color: white;
-        }
-
-    </style>
+  </style>
 </head>
-
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Contact Me</h1>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="About.html">About Me</a>
-            <a href="Services.html">Services</a>
-            <a href="Projects.html">Projects</a>
-        </nav>
-    </header>
+  <header>
+    <h1>Contact Me</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="About.html">About Me</a>
+      <a href="Services.html">Services</a>
+      <a href="Projects.html">Projects</a>
+    </nav>
+  </header>
 
-    <section class="services-container">
+  <section class="services-container">
+    <div class="service-card">
+      <h2>CALL</h2>
+      <button class="call-btn" onclick="window.location.href='tel:+919818306650';">📞</button>
+    </div>
 
-        <div class="service-card">
-            <h2>CALL</h2>
-            <button class="call-btn" onclick="window.location.href='tel:+919818306650';">
-                📞
-            </button>
-        </div>
+    <div class="service-card">
+      <h2>MAIL</h2>
+      <button class="call-btn" onclick="window.location.href='mailto:isaifalipvt@gmail.com';">📨</button>
+    </div>
 
-        <div class="service-card">
-            <h2>MAIL</h2>
-            <button class="call-btn"  onclick="window.location.href='mailto:isaifalipvt@gmail.com';">
-                📨
-            </button>
+    <div class="service-card">
+      <h2>WHATSAPP</h2>
+      <button class="call-btn" onclick="location.href='https://wa.me/919818306650';">📱</button>
+    </div>
+  </section>
 
+  <section class="contact-container">
+    <h2>Get In Touch !! </h2>
+    <form action="https://formspree.io/f/meoaqpgv" method="POST">
+      <div class="form-group">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+      </div>
 
-        </div>
+      <div class="form-group">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+      </div>
 
-        <div class="service-card">
-            <h2>WHATSAPP</h2>
-            <button  class="call-btn" onclick="location.href='https://wa.me/919818306650';">
-                📱
-            </button>
+      <div class="form-group">
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+      </div>
 
-        </div>
+      <button type="submit" class="submit-btn">Send Message</button>
 
-    </section>
+    </form>
+  </section>
 
-    <!-- Contact Form Section -->
-    <section class="contact-container">
-        <h2>Get In Touch</h2>
-        <form action="https://formspree.io/f/meoaqpgv" method="POST">
-            <div class="form-group">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="message">Your Message:</label>
-                <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
-            </div>
-
-            <button type="submit" class="submit-btn">Send Message</button>
-        </form>
-
-        <!-- Home Button -->
-        <div style="text-align: center;">
-            <a href="index.html" class="home-btn">Back to Home</a>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        © 2025 Saif | Aspiring Full-Stack Developer & Cybersecurity Learner
-    </footer>
+  <footer>
+    © 2025 Saif | Aspiring Full-Stack Developer & Cybersecurity Learner
+  </footer>
 
 </body>
-
 </html>

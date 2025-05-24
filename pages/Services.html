@@ -4,12 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>My Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
             background-color: #000000;
             color: #c0c0c0;
             line-height: 1.6;
@@ -22,7 +26,7 @@
             background: #0f0028;
             color: white;
             text-align: center;
-            padding: 20px 0;
+            padding: 20px 10px;
         }
 
         h1 {
@@ -37,7 +41,7 @@
         nav a {
             text-decoration: none;
             color: white;
-            margin: 0 15px;
+            margin: 0 12px;
             font-size: 18px;
             transition: color 0.3s ease;
         }
@@ -51,27 +55,29 @@
             justify-content: center;
             flex-wrap: wrap;
             padding: 40px 20px;
+            gap: 20px;
             flex: 1;
         }
 
         .service-card {
-            background: rgba(255, 255, 255, 0.075);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px;
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 25px;
             width: 300px;
             text-align: center;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .service-card:hover {
             transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
         }
 
         .service-card h2 {
             color: #ffffff;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            font-size: 1.4rem;
         }
 
         .service-card p {
@@ -81,12 +87,14 @@
 
         .home-btn {
             display: inline-block;
-            padding: 8px 12px;
+            padding: 10px 16px;
             background-color: #000000;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            margin: 30px auto;
         }
 
         .home-btn:hover {
@@ -99,6 +107,52 @@
             background: #0f0028;
             color: white;
             margin-top: auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .services-container {
+                padding: 20px 10px;
+            }
+
+            .service-card {
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                margin: 6px 10px;
+                font-size: 15px;
+            }
+
+            .service-card {
+                padding: 20px 15px;
+            }
+
+            .service-card h2 {
+                font-size: 1.2rem;
+            }
+
+            .service-card p {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -118,37 +172,35 @@
 
     <!-- Services Section -->
     <section class="services-container">
-
         <div class="service-card">
             <h2>Full-Stack Web Development</h2>
-            <p>Building responsive and interactive web applications using HTML, CSS, JavaScript, and Java for a seamless frontend and backend experience.</p>
+            <p>Building responsive and interactive web apps using HTML, CSS, JavaScript, and Java.</p>
         </div>
 
         <div class="service-card">
             <h2>REST API Integration</h2>
-            <p>Creating and integrating RESTful APIs to enable communication between front-end interfaces and backend services for dynamic apps.</p>
+            <p>Creating and integrating RESTful APIs for dynamic frontend and backend interactions.</p>
         </div>
 
         <div class="service-card">
             <h2>Database Design</h2>
-            <p>Designing and managing databases using MySQL or MongoDB, including data modeling, queries, and relationships to power applications.</p>
+            <p>Designing MySQL/MongoDB databases with robust structures and optimized queries.</p>
         </div>
 
         <div class="service-card">
             <h2>UI/UX Prototyping</h2>
-            <p>Crafting intuitive user interfaces and experiences using Figma — from wireframes to pixel-perfect designs focused on usability.</p>
+            <p>Designing intuitive interfaces in Figma — wireframes to final UI designs.</p>
         </div>
 
         <div class="service-card">
             <h2>Code Collaboration</h2>
-            <p>Using Git and GitHub for source control, team collaboration, and maintaining clean commit histories across personal and team projects.</p>
+            <p>Managing repositories and contributions using Git and GitHub workflows.</p>
         </div>
 
         <div class="service-card">
             <h2>Security Awareness</h2>
-            <p>Foundational knowledge of cybersecurity concepts, preparing for future roles in ethical hacking and bug bounty hunting.</p>
+            <p>Cybersecurity fundamentals, preparing for ethical hacking and bug bounty skills.</p>
         </div>
-
     </section>
 
     <!-- Footer Section -->
