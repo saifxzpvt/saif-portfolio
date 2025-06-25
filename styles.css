@@ -432,6 +432,7 @@ footer .text-center {
 .btn:hover {
   background-color: rgb(150, 150, 150);
   font-size: 14px;
+<<<<<<< HEAD
 }
 
 /* Floating Widget Base */
@@ -565,3 +566,6 @@ footer .text-center {
   border-radius: 10px;
   cursor: pointer;
 }
+=======
+}
+>>>>>>> 63513fdc877f422c25a23f5780f3b56afd7fb40b
