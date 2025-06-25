@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Arial", sans-serif;
+      background: #0f0028;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      margin: 0 15px;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #898989;
+    }
+
+    /* Project Cards */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(128, 128, 128, 0.8);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .project-content {
+      padding: 20px;
+    }
+
+    .project-title {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #0f0028;
+    }
+
+    .project-description {
+      font-size: 1rem;
+      color: black;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #000000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #270065;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0f0028;
+      color: white;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 8px 10px;
+        font-size: 16px;
+      }
+
+      .project-title {
+        font-size: 1.3rem;
+      }
+
+      .project-description {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+
+      .project-content {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My Projects!</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="projects">
+      <!-- Project Cards -->
+      <div class="project-card">
+        <img src="bot.png" alt="Chatbot Project" />
+        <div class="project-content">
+          <h2 class="project-title">Chatbot Application</h2>
+          <p class="project-description">
+            A Python chatbot built with NLTK to simulate conversations. It responds to basic queries with predefined answers and includes Saif-specific personalization.
+          </p>
+          <a href="https://github.com/saifxzpvt/chatbot.git" target="_blank" class="btn">View on GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="curr.png" alt="Currency Converter Project" />
+        <div class="project-content">
+          <h2 class="project-title">Currency Converter</h2>
+          <p class="project-description">
+            A real-time currency converter using Python and APILayer Exchange Rates API. Converts currencies accurately with up-to-date rates.
+          </p>
+          <a href="https://github.com/saifxzpvt/currency.git" target="_blank" class="btn">View on GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="pass.png" alt="Password Suggester Project" />
+        <div class="project-content">
+          <h2 class="project-title">Password Suggester</h2>
+          <p class="project-description">
+            Generates secure, random passwords using Python. Includes upper/lowercase letters, digits, and symbols to ensure strength.
+          </p>
+          <a href="https://github.com/saifxzpvt/password.git" target="_blank" class="btn">View on GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="wea.png" alt="Weather App Project" />
+        <div class="project-content">
+          <h2 class="project-title">Weather App</h2>
+          <p class="project-description">
+            A weather app using HTML, CSS, JS, and OpenWeatherMap API. Lets users search cities and view live weather updates.
+          </p>
+          <a href="https://github.com/saifxzpvt/weather-app.git" target="_blank" class="btn">View on GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="todo.png" alt="To-Do App Project" />
+        <div class="project-content">
+          <h2 class="project-title">To-Do App</h2>
+          <p class="project-description">
+            A dynamic task manager built with HTML, CSS, JS. It stores tasks using local storage to retain them between sessions.
+          </p>
+          <a href="https://github.com/saifxzpvt/todo-app.git" target="_blank" class="btn">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Saif | Aspiring Full-Stack Developer & Cybersecurity Learner
+  </footer>
+</body>
+</html>

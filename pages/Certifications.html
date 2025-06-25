@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Certifications - Saif Ali</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(to right, #140f27, #0f0028, #0f0028);
+        background-attachment: fixed;
+        color: #fff;
+      }
+      nav {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: white;
+        margin: 0 15px;
+        font-size: 18px;
+        transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: #898989;
+      }
+
+      .certifications {
+        padding: 40px 20px;
+        max-width: 1200px;
+        margin: auto;
+        text-align: center;
+      }
+
+      .certifications h1 {
+        font-size: 2.5rem;
+        color: #fdfdfd;
+        margin-bottom: 30px;
+      }
+
+      .cert-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+      }
+
+      .cert-card {
+        background: white;
+        padding: 16px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+      }
+
+      .cert-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 20px rgba(128, 128, 128, 0.957);
+      }
+
+      .cert-card iframe {
+        width: 100%;
+        height: 200px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        border-radius: 8px;
+      }
+
+      .cert-card h3 {
+        margin: 10px 0 5px;
+        font-size: 1.2rem;
+        color: #222;
+      }
+
+      .cert-card p {
+        font-size: 0.95rem;
+        color: #555;
+      }
+
+      .cert-card a {
+        display: inline-block;
+        margin-top: 8px;
+        color: #007acc;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .cert-card a:hover {
+        text-decoration: underline;
+      }
+
+
+      footer {
+            text-align: center;
+            padding: 20px;
+            background: #0f0028;
+            color: white;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="background-3d"></div>
+
+    <section class="certifications">
+      <h1>My Certifications</h1>
+
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="Services.html">Services</a>
+        <a href="Projects.html">Projects</a>
+        <a href="Contact.html">Contact</a>
+      </nav>
+
+      <div class="cert-grid">
+        <div class="cert-card">
+          <iframe src="Certificates/e&y certificate.pdf"></iframe>
+          <h3>IT & Career Readiness</h3>
+          <p>Anudip Foundation & EY</p>
+          <p><strong>Date:</strong> Sep – Oct 2024</p>
+          <a href="Certificates/e&y certificate.pdf" target="_blank"
+            >View Full</a
+          >
+        </div>
+
+        <div class="cert-card">
+          <iframe src="Certificates/intro cybersecurity.pdf"></iframe>
+          <h3>Introduction to Cybersecurity</h3>
+          <p>Cisco Networking Academy</p>
+          <p><strong>Date:</strong> May 24, 2025</p>
+          <a href="Certificates/intro cybersecurity.pdf" target="_blank"
+            >View Full</a
+          >
+        </div>
+
+        <div class="cert-card">
+          <iframe src="Certificates/isro certificate.pdf"></iframe>
+          <h3>Geospatial Modeling & Risk Analysis</h3>
+          <p>ISRO IIRS</p>
+          <p><strong>Date:</strong> Feb 13–17, 2023</p>
+          <a href="Certificates/isro certificate.pdf" target="_blank"
+            >View Full</a
+          >
+        </div>
+
+        <div class="cert-card">
+          <iframe src="Certificates/networking basics.pdf"></iframe>
+          <h3>Networking Basics</h3>
+          <p>Cisco Networking Academy</p>
+          <p><strong>Date:</strong> May 24, 2025</p>
+          <a href="Certificates/networking basics.pdf" target="_blank"
+            >View Full</a
+          >
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer>
+      © 2025 Saif | Aspiring Full-Stack Developer & Cybersecurity Learner
+  </footer>
+
+  </body>
+</html>
