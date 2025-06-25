@@ -334,8 +334,13 @@ main hr {
 }
 
 .telegram {
-  background: #0088cc;
+  background: #0056e0;
 }
+
+.linkedin {
+  background: #00a6ff;
+}
+
 
 /* Responsive Design */
 @media (max-width: 780px) {
@@ -432,7 +437,6 @@ footer .text-center {
 .btn:hover {
   background-color: rgb(150, 150, 150);
   font-size: 14px;
-<<<<<<< HEAD
 }
 
 /* Floating Widget Base */
@@ -566,6 +570,3 @@ footer .text-center {
   border-radius: 10px;
   cursor: pointer;
 }
-=======
-}
->>>>>>> 63513fdc877f422c25a23f5780f3b56afd7fb40b
