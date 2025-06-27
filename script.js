@@ -7,3 +7,14 @@ function toggleMenu() {
 }
 
 // Add any additional JavaScript functionality as needed
+document.addEventListener("click", function (event) {
+  const menu = document.getElementById("navMenu");
+  const icon = document.querySelector(".menu-icon");
+  if (!menu.contains(event.target) && !icon.contains(event.target)) {
+    menu.classList.remove("active");
+  }
+});
+
+window.addEventListener("scroll", () => {
+  document.getElementById("navMenu").classList.remove("active");
+});
