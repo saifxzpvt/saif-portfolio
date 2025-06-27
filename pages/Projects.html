@@ -2,53 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>My Projects</title>
+  <title>My Projects - Saif Ali</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    /* Global Styles */
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      padding: 0;
-      font-family: "Arial", sans-serif;
-      background: #0f0028;
+      font-family: 'Poppins', sans-serif;
+      background: #020202;
       color: #ffffff;
       line-height: 1.6;
     }
 
     .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
+      max-width: 1300px;
+      margin: auto;
+      padding: 60px 30px;
+    }
+
+    .header-section {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      animation: slideDown 1s ease;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .header-container {
+      max-width: 1300px;
+      margin: auto;
+      padding: 5px 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .header-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, rgb(238, 0, 255), #7700ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeInLeft 1s ease-in-out;
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 30px;
+      animation: fadeInRight 1s ease-in-out;
+    }
+
+    .header-nav a {
+      position: relative;
+      text-decoration: none;
+      font-weight: 500;
+      color: #ffffff;
+      transition: color 0.3s ease;
+      padding: 4px 0;
+      font-size: 1rem;
+    }
+
+    .header-nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      height: 2px;
+      width: 0%;
+      background: linear-gradient(to right, rgb(157, 0, 255), rgb(255, 0, 251));
+      transition: width 0.4s ease;
+    }
+
+    .header-nav a:hover::after {
+      width: 100%;
+    }
+
+    .header-nav a:hover {
+      color: rgb(157, 0, 255);
     }
 
     h1 {
+      text-align: center;
       font-size: 3rem;
-      margin-bottom: 20px;
-      text-align: center;
+      color: #ffffff;
+      margin: 40px 0;
     }
 
-    nav {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: white;
-      margin: 0 15px;
-      font-size: 18px;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #898989;
-    }
-
-    /* Project Cards */
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -56,22 +104,43 @@
     }
 
     .project-card {
-      background: white;
-      border-radius: 12px;
+      position: relative;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
       overflow: hidden;
-      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.15);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      isolation: isolate;
     }
 
     .project-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 20px rgba(128, 128, 128, 0.8);
+      transform: rotateX(8deg) rotateY(-8deg) scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(120deg, rgb(157, 0, 255), rgba(255, 255, 255, 0));
+      transform: skewX(-20deg);
+      transition: 0.5s;
+      z-index: -1;
+    }
+
+    .project-card:hover::before {
+      left: 130%;
     }
 
     .project-card img {
       width: 100%;
-      height: auto;
-      display: block;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
     }
 
     .project-content {
@@ -81,147 +150,185 @@
     .project-title {
       font-size: 1.5rem;
       margin-bottom: 10px;
-      color: #0f0028;
+      color: #ffffff;
     }
 
     .project-description {
       font-size: 1rem;
-      color: black;
+      color: #cccccc;
     }
 
     .btn {
       display: inline-block;
       margin-top: 15px;
+      margin-right: 10px;
       padding: 10px 20px;
       font-size: 16px;
-      background-color: #000000;
+      background-color: rgba(255, 255, 255, 0.08);
       color: white;
-      border: none;
-      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 30px;
       text-decoration: none;
-      transition: background-color 0.3s ease;
+      transition: 0.3s ease;
     }
 
     .btn:hover {
-      background-color: #270065;
+      background-color: rgba(255, 255, 255, 0.15);
+      transform: scale(1.05);
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      background: #0f0028;
+      padding: 30px 20px;
+      background: linear-gradient(90deg, rgb(238, 0, 255), #7700ff);
       color: white;
-      margin-top: 40px;
+      font-size: 14px;
+      margin-top: 60px;
     }
 
-    /* Responsive */
+    @keyframes slideDown {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInLeft {
+      from {
+        transform: translateX(-30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        transform: translateX(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
     @media (max-width: 768px) {
       h1 {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
       }
 
-      nav a {
-        display: inline-block;
-        margin: 8px 10px;
-        font-size: 16px;
+      .header-container {
+        flex-direction: column;
+        gap: 15px;
       }
 
-      .project-title {
-        font-size: 1.3rem;
-      }
-
-      .project-description {
-        font-size: 0.95rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      .btn {
-        font-size: 14px;
-        padding: 8px 16px;
-      }
-
-      .project-content {
-        padding: 15px;
+      .header-nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
       }
     }
   </style>
 </head>
 <body>
+  <div class="header-section">
+    <div class="header-container">
+      <h1 class="header-title">PROJECTS</h1>
+      <nav class="header-nav">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+
   <div class="container">
-    <h1>My Projects!</h1>
-    <nav>
-      <a href="../index.html">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
     <div class="projects">
-      <!-- Project Cards -->
+      <!-- Your project cards go here -->
+      <!-- Same HTML structure you shared, just paste your project cards inside this container -->
+    
+    <div class="projects">
+      <!-- Zeroni AI Assistant -->
       <div class="project-card">
-        <img src="bot.png" alt="Chatbot Project" />
+        <img src="bot.png" alt="Zeroni AI Assistant" />
         <div class="project-content">
-          <h2 class="project-title">Chatbot Application</h2>
+          <h2 class="project-title">Zeroni – AI Chat Assistant</h2>
           <p class="project-description">
-            A Python chatbot built with NLTK to simulate conversations. It responds to basic queries with predefined answers and includes Saif-specific personalization.
+            A React + Django-powered AI chatbot integrated with OpenAI API. Features voice input/output and sleek UI — designed to be embedded into portfolios or used as a standalone AI assistant.
           </p>
-          <a href="https://github.com/saifxzpvt/chatbot.git" target="_blank" class="btn">View on GitHub</a>
+          <a href="https://github.com/saifxzpvt/zeroni-ai-assistant" target="_blank" class="btn">GitHub</a>
+          <a href="https://your-zeroni-live-link.com" target="_blank" class="btn">Live Site</a>
         </div>
       </div>
 
+      <!-- Currency Converter -->
       <div class="project-card">
-        <img src="curr.png" alt="Currency Converter Project" />
+        <img src="curr.png" alt="Currency Converter Pro" />
         <div class="project-content">
-          <h2 class="project-title">Currency Converter</h2>
+          <h2 class="project-title">Currency Conv</h2>
           <p class="project-description">
-            A real-time currency converter using Python and APILayer Exchange Rates API. Converts currencies accurately with up-to-date rates.
+            A modern Python app with real-time exchange data from APILayer. Converts between 150+ currencies with live accuracy and stylish UI for web.
           </p>
-          <a href="https://github.com/saifxzpvt/currency.git" target="_blank" class="btn">View on GitHub</a>
+          <a href="https://github.com/saifxzpvt/currency-conv" target="_blank" class="btn">GitHub</a>
+          <a href="https://currencyc0nv.netlify.app/" target="_blank" class="btn">Live Site</a>
         </div>
       </div>
 
+      <!-- SecurePass Pro -->
       <div class="project-card">
-        <img src="pass.png" alt="Password Suggester Project" />
+        <img src="pass.png" alt="SecurePass Pro" />
         <div class="project-content">
-          <h2 class="project-title">Password Suggester</h2>
+          <h2 class="project-title">Password-Gen</h2>
           <p class="project-description">
-            Generates secure, random passwords using Python. Includes upper/lowercase letters, digits, and symbols to ensure strength.
+            A full-stack password manager built with React, TailwindCSS, Django REST, and MongoDB. Secures credentials using bcrypt encryption and supports cloud syncing.
           </p>
-          <a href="https://github.com/saifxzpvt/password.git" target="_blank" class="btn">View on GitHub</a>
+          <a href="https://github.com/saifxzpvt/password-generator-app" target="_blank" class="btn">GitHub</a>
+          <a href="https://passwordgez.netlify.app/" target="_blank" class="btn">Live Site</a>
         </div>
       </div>
 
+      <!-- Weatherify+ -->
       <div class="project-card">
-        <img src="wea.png" alt="Weather App Project" />
+        <img src="wea.png" alt="Weatherify+" />
         <div class="project-content">
-          <h2 class="project-title">Weather App</h2>
+          <h2 class="project-title">Weatherify+ – React Weather App</h2>
           <p class="project-description">
-            A weather app using HTML, CSS, JS, and OpenWeatherMap API. Lets users search cities and view live weather updates.
+            A React-based weather app with real-time data from OpenWeatherMap API. Features weekly forecast, location detection, and voice support.
           </p>
-          <a href="https://github.com/saifxzpvt/weather-app.git" target="_blank" class="btn">View on GitHub</a>
+          <a href="https://github.com/saifxzpvt/weatherify-plus" target="_blank" class="btn">GitHub</a>
+          <a href="https://weatherifyplus.netlify.app/" target="_blank" class="btn">Live Site</a>
         </div>
       </div>
 
+      <!-- TaskZen -->
       <div class="project-card">
-        <img src="todo.png" alt="To-Do App Project" />
+        <img src="todo.png" alt="TaskZen" />
         <div class="project-content">
-          <h2 class="project-title">To-Do App</h2>
+          <h2 class="project-title">TaskZen – Smart To-Do App</h2>
           <p class="project-description">
-            A dynamic task manager built with HTML, CSS, JS. It stores tasks using local storage to retain them between sessions.
+            A productivity app with voice input (Web Speech API), task tags, filters, and due date reminders. Built using React and localStorage — sleek, fast, and functional.
           </p>
-          <a href="https://github.com/saifxzpvt/todo-app.git" target="_blank" class="btn">View on GitHub</a>
+          <a href="https://github.com/saifxzpvt/todo-app" target="_blank" class="btn">GitHub</a>
+          <a href="https://hitechtodo.netlify.app/" target="_blank" class="btn">Live Site</a>
         </div>
       </div>
     </div>
   </div>
 
+    
+    </div>
+  </div>
+
   <footer>
-    © 2025 Saif | Aspiring Full-Stack Developer & Cybersecurity Learner
+    © 2025 Saif | Full-Stack Developer & Future Ethical Hacker
   </footer>
 </body>
 </html>

@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -12,33 +13,64 @@
     }
 
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #000;
-      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      background-color: #020202;
+      color: #ffffff;
       line-height: 1.6;
     }
 
     header {
-      background: #0f0028;
-      text-align: center;
-      padding: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(14px);
+      padding: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
 
     h1 {
       font-size: 2.5rem;
       margin-bottom: 10px;
+      background: linear-gradient(90deg,rgb(238, 0, 255), #7700ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      animation: fadeInDown 1s ease;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 10px;
+      animation: fadeInUp 1s ease;
     }
 
     nav a {
       text-decoration: none;
-      color: #fff;
-      margin: 0 10px;
+      color: #ffffff;
+      margin: 0 15px;
       font-size: 18px;
-      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      height: 2px;
+      width: 0%;
+      background: linear-gradient(to right,rgb(157, 0, 255),rgb(255, 0, 251));
+      transition: width 0.4s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
     }
 
     nav a:hover {
-      color: #d4edda;
+      color: rgb(180, 180, 180);
     }
 
     .services-container {
@@ -50,18 +82,19 @@
     }
 
     .service-card {
-      background: #111;
+      background: rgba(255,255,255,0.05);
       border-radius: 10px;
       padding: 20px;
       width: 300px;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 15px rgba(255,255,255,0.05);
       transition: transform 0.3s ease, background 0.3s ease;
+      backdrop-filter: blur(6px);
     }
 
     .service-card:hover {
       transform: translateY(-8px);
-      background: #1a1a1a;
+      background: rgba(255,255,255,0.1);
     }
 
     .service-card h2 {
@@ -72,32 +105,33 @@
     .call-btn {
       padding: 12px 20px;
       font-size: 20px;
-      background-color: #0f0028;
+      background: linear-gradient(90deg, #5f00ff, #ff00ea);
       color: #fff;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: transform 0.3s ease;
     }
 
     .call-btn:hover {
-      background-color: #2b0071;
+      transform: scale(1.08);
     }
 
     .contact-container {
       max-width: 800px;
       margin: 30px auto;
-      padding: 25px;
-      background: #fff;
-      color: #000;
-      border-radius: 10px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(255,255,255,0.1);
+      backdrop-filter: blur(8px);
     }
 
     .contact-container h2 {
       text-align: center;
       margin-bottom: 25px;
-      color: #0f0028;
+      color: #ffffff;
     }
 
     .form-group {
@@ -107,14 +141,16 @@
     label {
       display: block;
       margin-bottom: 8px;
-      font-weight: bold;
+      font-weight: 600;
     }
 
     input, textarea {
       width: 100%;
       padding: 12px;
       font-size: 16px;
-      border: 1px solid #ccc;
+      background: rgba(255,255,255,0.08);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.2);
       border-radius: 5px;
     }
 
@@ -125,18 +161,18 @@
 
     .submit-btn {
       display: inline-block;
-      background: #0f0028;
+      background: linear-gradient(90deg,#6a00ff,#ff00e0);
       color: white;
       padding: 12px 20px;
       font-size: 18px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: transform 0.3s ease;
     }
 
     .submit-btn:hover {
-      background-color: #2b0071;
+      transform: scale(1.05);
     }
 
     .home-btn {
@@ -151,18 +187,23 @@
       transition: background 0.3s ease;
     }
 
-    .home-btn:hover {
-      background-color: #270361;
-    }
-
     footer {
       text-align: center;
       padding: 20px;
-      background: #0f0028;
+      background: linear-gradient(90deg,rgb(238, 0, 255), #7700ff);
       color: white;
     }
 
-    /* Responsive Design */
+    @keyframes fadeInDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
     @media (max-width: 768px) {
       h1 {
         font-size: 2rem;
@@ -182,11 +223,9 @@
         width: 90%;
       }
     }
-
   </style>
 </head>
 <body>
-
   <header>
     <h1>Contact Me</h1>
     <nav>
@@ -215,7 +254,7 @@
   </section>
 
   <section class="contact-container">
-    <h2>Get In Touch !! </h2>
+    <h2>Get In Touch !!</h2>
     <form action="https://formspree.io/f/meoaqpgv" method="POST">
       <div class="form-group">
         <label for="name">Your Name:</label>
@@ -233,13 +272,11 @@
       </div>
 
       <button type="submit" class="submit-btn">Send Message</button>
-
     </form>
   </section>
 
   <footer>
     © 2025 Saif | Aspiring Full-Stack Developer & Cybersecurity Learner
   </footer>
-
 </body>
 </html>
