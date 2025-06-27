@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saif's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="fontawesome.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Saif's Portfolio</div>
+        <div class="navbar">
+          <div class="menu-icon" onclick="toggleMenu()">...</div>
+          <script>
+            function toggleMenu() {
+              const navMenu = document.getElementById("navMenu");
+              navMenu.classList.toggle("active");
+            }
+          </script>
+          <div class="right">
+            <ul id="navMenu">
+              <li><a href="pages/About.html" class="nav-link" >About</a></li>
+              <li><a href="pages/Services.html" class="nav-link" >Services</a></li>
+              <li><a href="pages/Projects.html" class="nav-link" >Projects</a></li>
+              <li><a href="pages/Contact.html" class="nav-link" >Contact Me</a></li>
+              <li><a href="pages/Certifications.html" class="nav-link" >Certifications</a></li>
+
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="firstsection">
+        <div class="leftsection">
+          <div>Hey! My name is <span class="name">Saif ali</span></div>
+          <div>and I am a passionate</div>
+          <span id="element"></span>
+          <div class="buttons">
+            <button
+              class="btn"
+              style="padding: 12px 20px"
+              onclick="window.location.href='resume.pdf'"
+            >
+              Download Resume
+            </button>
+            <button
+              class="btn"
+              style="padding: 12px 20px"
+              onclick="window.location.href='https://github.com/Saifxzpvt';"
+            >
+              Visit GitHub
+            </button>
+          </div>
+        </div>
+        <div class="rightsection">
+          <img src="pro.png" style="max-width: 100%; height: auto" />
+        </div>
+      </section>
+
+      <hr />
+
+      <section class="secondsection">
+        <span class="text-grey">What I have done so far</span>
+        <h1>Past Experience</h1>
+
+        <div class="experience">
+          <h2>🐍 Python Foundation Training – DAV Institute</h2>
+          <p>
+            • Built a solid understanding of core programming concepts such as variables, loops, functions, and data structures.<br>
+    • Worked with Python libraries like `random`, `datetime`, and `os` for creating logic-based mini apps.<br>
+    • Explored Object-Oriented Programming (OOP) – classes, objects, inheritance, and encapsulation.<br>
+    • Created basic CLI tools like calculator, password generator, and text-based chatbot using user input/output logic.<br>
+    • Learned file handling, error handling, and best practices for writing clean Python code.
+  </p>
+          </p>
+          <span class="date">(2019-2020)</span>
+        </div>
+
+        <div class="experience">
+          <h2> 🧠 PYTHON PROJECTS</h2>
+          <p>
+         • <strong>Password Generator</strong> – Developed a secure password generator that dynamically creates strong passwords based on user-defined length and complexity rules, ensuring high entropy and randomness.<br>
+
+• <strong>Currency Converter</strong> – Built a real-time currency converter app using Python and integrated it with a third-party exchange rate API (like exchangerate-api.com) to fetch live data and handle multi-currency inputs.<br>
+
+• <strong>Mini Chatbot</strong> – Designed a simple rule-based chatbot using conditional logic that responds intelligently to user greetings, common queries, and fallback scenarios, simulating conversational flow.
+
+          </p>
+          <span class="date">(2021-2022)</span>
+        </div>
+
+        <div class="experience">
+          <h2>📚 BCA – DAVIM</h2>
+          <p>
+            Studied core CS subjects including DBMS, Networking, Java, Data Structures.  
+    Built full-stack web apps using HTML/CSS/JS and backend logic in Python & Java.
+          </p>
+          <span class="date">(2022-2025)</span>
+        </div>
+
+        <div class="experience">
+          <h2>🚀 Full Stack – self</h2>
+          <p>
+           Built and deployed <strong>SecurePass Pro</strong>, a secure password manager with frontend in React/Tailwind 
+    and backend in Django + MongoDB. Used Bcrypt for hashing and Render + Netlify for deployment.
+          </p>
+          <span class="date">(2024-end)</span>
+        </div>
+
+        <div class="experience">
+          <h2>🤖 AI Chatbot – Zeroni Assistant</h2>
+          <p>Developed a JavaScript voice chatbot with Web Speech API. Integrated OpenAI API for real-time answers. 
+    Embedded in personal portfolio using floating widget.</p>
+          <span class="date">(2025)</span>
+        </div>
+
+<div class="experience">
+          <h2>💼 TaskZen – Full Stack Productivity App</h2>
+          <p>
+           Designed a full-stack productivity platform using React + Django REST + MongoDB. Features include tagging, 
+    smart suggestions, reminders, and markdown notes.
+          </p>
+          <span class="date">(2025-june)</span>
+        </div>
+
+
+        <div class="experience">
+  <h2>🎓 MCA – Jamia Hamdard University (Ongoing)</h2>
+  <p>
+    Currently pursuing my Master of Computer Applications (MCA) from <strong>Jamia Hamdard University</strong>, a prestigious NAAC A-grade institution recognized for excellence in computer science education.<br><br>
+
+    • Developing in-depth expertise in full-stack development, data structures, software engineering, and cloud computing.<br>
+    • Learning industry-relevant technologies including Java, Python, React.js, Django, and MongoDB.<br>
+    • Working on real-world projects focused on scalable web applications and RESTful APIs.<br>
+    • Building strong foundations in cybersecurity, ethical hacking, and secure coding practices.<br>
+    • Participating in group projects, hackathons, and open-source collaborations to enhance problem-solving and team dynamics.
+  </p>
+  <span class="date">(2025 – Present)</span>
+</div>
+
+
+      </section>
+    </main>
+
+    <div class="container1">
+      <a href="https://instagram.com/saif.dvv" target="_blank" class="box1 instagram">
+        <i class="fab fa-instagram"></i>
+        <p>Instagram</p>
+      </a>
+      <a href="https://github.com/Saifxzpvt" target="_blank" class="box1 github">
+        <i class="fab fa-github"></i>
+        <p>GitHub</p>
+      </a>
+      <a href="mailto:isaifalipvt@email.com" class="box1 email">
+        <i class="fas fa-envelope"></i>
+        <p>Email</p>
+      </a>
+      <a href="https://t.me/Saifxzpvt" target="_blank" class="box1 telegram">
+        <i class="fab fa-telegram-plane"></i>
+        <p>Telegram</p>
+      </a>
+
+ </a>
+      <a href="https://www.linkedin.com/in/saif-devv/" target="_blank" class="box1 linkedin">
+        <i class="fab fa-linkedin"></i>
+        <p>linkedin</p>
+      </a>
+
+    </div>
+
+    <footer>
+      <div class="footer">
+        <div class="footer-first">
+          <h2>Saif's Developer Portfolio //</h2>
+        </div>
+      </div>
+
+      <!-- Zeroni Widget -->
+      <div id="zeroni-widget">
+        <div id="zeroni-btn">
+          <img src="logo.png" alt="Zeroni" />
+          <span>Chat with Zeroni</span>
+        </div>
+
+        <div id="zeroni-box">
+          <div id="zeroni-header">
+            <h4>🤖 Zeroni Assistant</h4>
+            <span id="zeroni-close">×</span>
+          </div>
+          <div id="zeroni-messages">
+            <div class="message bot">Hi! I’m Zeroni, how can I help you?</div>
+          </div>
+          <div id="zeroni-input-area">
+            <input type="text" id="zeroni-input" placeholder="Type your message..." />
+            <button id="send-btn">📤</button>
+            <button id="mic-btn">🎤</button>
+          </div>
+        </div>
+      </div>
+
+      <section id="contact" class="contact-section">
+        <h2>Contact Me!</h2>
+        <p>
+          Feel free to reach out if you're looking for a developer or have any
+          questions about my work.
+        </p>
+        <form action="https://formspree.io/f/meoaqpgv" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">SEND</button>
+        </form>
+      </section>
+
+      <div class="text-center">
+        © 2025 Saif || Aspiring Full-Stack Developer & Cybersecurity Learner
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="zeroni.js"></script>
+    <script src="zeroni-voice.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "Web Developer",
+          "Graphic Designer",
+          "Web Designer",
+          "Full Stack Developer",
+        ],
+        typeSpeed: 50,
+      });
+
+
+
+    </script>
+  </body>
+</html>

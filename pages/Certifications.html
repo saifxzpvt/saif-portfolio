@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Certifications - Saif Ali</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: rgb(2, 2, 2);
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 12px 30px;
+    }
+
+    .header-container {
+      max-width: 1300px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .header-title {
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, rgb(238, 0, 255), #7700ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: #ffffff;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0%;
+      height: 2px;
+      background: linear-gradient(to right, rgb(157, 0, 255), rgb(255, 0, 251));
+      transition: width 0.4s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: rgb(157, 0, 255);
+    }
+
+    .certifications {
+      max-width: 1300px;
+      margin: auto;
+      padding: 60px 30px;
+      text-align: center;
+    }
+
+    .certifications h1 {
+      font-size: 2.7rem;
+      margin-bottom: 40px;
+      color: white;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .cert-card {
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .cert-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+    }
+
+    .cert-card iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .cert-card h3 {
+      font-size: 1.3rem;
+      color: #ffffff;
+      margin: 10px 0;
+    }
+
+    .cert-card p {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    .cert-card a {
+      color: #00b3ff;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .cert-card a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: linear-gradient(90deg, rgb(238, 0, 255), #7700ff);
+      color: white;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+
+      .header-title {
+        font-size: 1.8rem;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      .certifications h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-container">
+      <div class="header-title">CERTIFICATIONS</div>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="Services.html">Services</a>
+        <a href="Projects.html">Projects</a>
+        <a href="Contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="certifications">
+    <h1>My Certifications</h1>
+
+    <div class="cert-grid">
+      <div class="cert-card">
+        <iframe src="Certificates/e&y certificate.pdf"></iframe>
+        <h3>IT & Career Readiness</h3>
+        <p>Anudip Foundation & EY</p>
+        <p><strong>Date:</strong> Sep – Oct 2024</p>
+        <a href="Certificates/e&y certificate.pdf" target="_blank">View Full</a>
+      </div>
+
+      <div class="cert-card">
+        <iframe src="Certificates/intro cybersecurity.pdf"></iframe>
+        <h3>Introduction to Cybersecurity</h3>
+        <p>Cisco Networking Academy</p>
+        <p><strong>Date:</strong> May 24, 2025</p>
+        <a href="Certificates/intro cybersecurity.pdf" target="_blank">View Full</a>
+      </div>
+
+      <div class="cert-card">
+        <iframe src="Certificates/isro certificate.pdf"></iframe>
+        <h3>Geospatial Modeling & Risk Analysis</h3>
+        <p>ISRO IIRS</p>
+        <p><strong>Date:</strong> Feb 13–17, 2023</p>
+        <a href="Certificates/isro certificate.pdf" target="_blank">View Full</a>
+      </div>
+
+      <div class="cert-card">
+        <iframe src="Certificates/networking basics.pdf"></iframe>
+        <h3>Networking Basics</h3>
+        <p>Cisco Networking Academy</p>
+        <p><strong>Date:</strong> May 24, 2025</p>
+        <a href="Certificates/networking basics.pdf" target="_blank">View Full</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Saif | Aspiring Full-Stack Developer & Cybersecurity Learner
+  </footer>
+
+</body>
+</html>
