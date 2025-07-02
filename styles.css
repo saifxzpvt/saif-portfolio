@@ -921,10 +921,6 @@ footer .text-center {
 
 
 
-
-
-
-
 .tech-section {
   margin: 60px auto;
   padding: 40px 20px;
@@ -1042,5 +1038,34 @@ footer .text-center {
   }
   .tech-group {
     flex: 1;
+  }
+} 
+
+@media (max-width: 767px) {
+  .tech-groups {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .tech-scroll {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 10px;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+
+  .tech-scroll img {
+    width: 60px;
+    height: 60px;
+    flex: 0 0 auto;
+  }
+
+  .tech-group {
+    width: 100%;
+    text-align: center;
   }
 }
