@@ -11,16 +11,24 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap"
       rel="stylesheet"
     />
+       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
    <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 />
     <link rel="stylesheet" href="styles.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
   </head>
   <body>
     <header>
       <nav>
-        <div class="left">Saif's Portfolio</div>
+       <div class="left">
+  <img src="logo.png" alt="Saif Logo" class="logo" />
+  <span>Saif's Portfolio</span>
+</div>
+
         <div class="navbar">
           <div class="menu-icon" onclick="toggleMenu()">...</div>
           <script>
@@ -71,6 +79,57 @@
           <img src="pro.png" style="max-width: 100%; height: auto" />
         </div>
       </section>
+
+
+<hr />
+
+
+      <!-- Tech Stack Icons -->
+<!-- My Tech Stack Section -->
+<section class="tech-section" id="tech">
+  <h2 class="section-heading" data-aos="fade-up">🚀 My Tech Stack</h2>
+  
+  <div class="tech-groups">
+    <div class="tech-group" data-aos="fade-up" data-aos-delay="100">
+      <h3>Frontend</h3>
+      <div class="tech-scroll">
+        <img src="logz/html5.svg" title="HTML5" alt="HTML5">
+        <img src="logz/css.svg" title="CSS3" alt="CSS3">
+        <img src="logz/javascript.svg" title="JavaScript" alt="JavaScript">
+        <img src="logz/react.svg" title="React" alt="React">
+        <img src="logz/tailwindcss.svg" title="Tailwind CSS" alt="Tailwind CSS">
+        <img src="logz/reactbootstrap.svg" title="React Bootstrap" alt="React Bootstrap">
+      </div>
+    </div>
+
+    <div class="tech-group" data-aos="fade-up" data-aos-delay="200">
+      <h3>Backend</h3>
+      <div class="tech-scroll">
+        <img src="logz/python.svg" title="Python" alt="Python">
+        <img src="logz/nodedotjs.svg" title="Node.js" alt="Node.js">
+        <img src="logz/springboot.svg" title="Spring Boot" alt="Spring Boot">
+        <img src="logz/mysql.svg" title="MySQL" alt="MySQL">
+        <img src="logz/mongodb.svg" title="MongoDB" alt="MongoDB">
+      </div>
+    </div>
+
+    <div class="tech-group" data-aos="fade-up" data-aos-delay="300">
+      <h3>Tools</h3>
+      <div class="tech-scroll">
+        <img src="logz/postman.svg" title="Postman" alt="Postman">
+        <img src="logz/linux.svg" title="Linux" alt="Linux">
+        <img src="logz/git.svg" title="Git" alt="Git">
+        <img src="logz/github.svg" title="GitHub" alt="GitHub">
+        <img src="logz/figma.svg" title="Figma" alt="Figma">
+        <img src="logz/canva.svg" title="Canva" alt="Canva">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
 
       <hr />
 
@@ -233,6 +292,10 @@
     </footer>
 
     <!-- Scripts -->
+  
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ duration: 1000 });</script>
+
     <script src="zeroni.js"></script>
     <script src="zeroni-voice.js"></script>
     <script src="script.js"></script>
@@ -248,5 +311,24 @@
         typeSpeed: 50,
       });
         </script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+<script>
+  VanillaTilt.init(document.querySelectorAll(".tech-card"), {
+    max: 15,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.3,
+    scale: 1.05,
+  });
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000 });
+</script>
+
+
   </body>
 </html>

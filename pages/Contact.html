@@ -223,10 +223,28 @@
         width: 90%;
       }
     }
+
+    /* Shrink on scroll */
+.header {
+  transition: all 0.3s ease;
+}
+
+.header.shrink {
+  padding: 4px 10px;
+}
+
+.header.shrink h1 {
+  font-size: 1.6rem;
+}
+
+.header.shrink nav a {
+  font-size: 0.9rem;
+}
+
   </style>
 </head>
 <body>
-  <header>
+  <header class="header" >
     <h1>Contact Me</h1>
     <nav>
       <a href="../index.html">Home</a>
@@ -278,5 +296,18 @@
   <footer>
     © 2025 Saif | Aspiring Full-Stack Developer & Cybersecurity Learner
   </footer>
+
+  <script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector(".header");
+    if (window.scrollY > 50) {
+      header.classList.add("shrink");
+    } else {
+      header.classList.remove("shrink");
+    }
+  });
+</script>
+
+
 </body>
 </html>

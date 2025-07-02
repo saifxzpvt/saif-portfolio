@@ -171,6 +171,26 @@
         font-size: 2rem;
       }
     }
+
+
+  /* Shrink effect for navbar */
+.header.shrink {
+  padding: 5px 15px;
+}
+
+.header.shrink .header-title {
+  font-size: 1.4rem;
+}
+
+.header.shrink nav a {
+  font-size: 0.9rem;
+}
+.header {
+  transition: all 0.3s ease;
+}
+
+
+
   </style>
 </head>
 <body>
@@ -228,6 +248,18 @@
   <footer>
     © 2025 Saif | Aspiring Full-Stack Developer & Cybersecurity Learner
   </footer>
+
+
+  <script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector(".header");
+    if (window.scrollY > 50) {
+      header.classList.add("shrink");
+    } else {
+      header.classList.remove("shrink");
+    }
+  });
+</script>
 
 </body>
 </html>

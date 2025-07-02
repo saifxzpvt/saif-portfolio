@@ -313,6 +313,23 @@
   }
 }
 
+/* Shrinked navbar styles */
+.header-section.shrink {
+  padding: 5px 0;
+  backdrop-filter: blur(18px);
+}
+
+.header-section.shrink .header-title {
+  font-size: 1.8rem;
+}
+
+.header-section.shrink .header-nav a {
+  font-size: 0.9rem;
+}
+
+.header-section {
+  transition: all 0.3s ease;
+}
 
   </style>
 </head>
@@ -416,6 +433,17 @@
   <footer>
     © 2025 Saif Ali | Full-Stack Developer | Future Ethical Hacker
   </footer>
+
+  <script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector(".header-section");
+    if (window.scrollY > 50) {
+      header.classList.add("shrink");
+    } else {
+      header.classList.remove("shrink");
+    }
+  });
+</script>
 
 </body>
 </html>

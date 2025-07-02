@@ -1,27 +1,22 @@
-// Text-to-Speech
-function speakZeroni(text) {
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = "en-US";
-  speechSynthesis.speak(utterance);
-}
+const micBtn = document.getElementById("mic-btn");
+const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+recognition.lang = "en-US";
+recognition.interimResults = false;
+recognition.continuous = false;
 
-// Voice Input
-function startListening() {
-  const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
-  recognition.lang = "en-IN";
+micBtn.addEventListener("click", () => {
   recognition.start();
+});
 
-  recognition.onstart = () => {
-    document.getElementById("zeroni-reply").textContent = "🎙️ Listening...";
-  };
+recognition.onresult = (e) => {
+  const transcript = e.results[0][0].transcript;
+  document.getElementById("zeroni-input").value = transcript;
+  sendMessage();
+};
 
-  recognition.onresult = (event) => {
-    const transcript = event.results[0][0].transcript;
-    document.getElementById("zeroni-input").value = transcript;
-    sendToZeroni();
-  };
-
-  recognition.onerror = (event) => {
-    document.getElementById("zeroni-reply").textContent = "❌ Mic Error: " + event.error;
-  };
+function speak(text) {
+  const synth = window.speechSynthesis;
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.lang = "en-US";
+  synth.speak(utter);
 }

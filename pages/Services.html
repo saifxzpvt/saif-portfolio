@@ -1,213 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>My Services</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <title>My Services - Saif Ali</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000000;
-            color: #c0c0c0;
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #020202;
+      color: #ffffff;
+      line-height: 1.6;
+    }
 
-        header {
-            background: #0f0028;
-            color: white;
-            text-align: center;
-            padding: 20px 10px;
-        }
+    .header-section {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      animation: slideDown 1s ease;
+    }
 
-        h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
+    .header-container {
+      max-width: 1300px;
+      margin: auto;
+      padding: 5px 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-        nav {
-            margin-top: 10px;
-        }
+    .header-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, rgb(238, 0, 255), #7700ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeInLeft 1s ease;
+    }
 
-        nav a {
-            text-decoration: none;
-            color: white;
-            margin: 0 12px;
-            font-size: 18px;
-            transition: color 0.3s ease;
-        }
+    .header-nav {
+      display: flex;
+      gap: 30px;
+      animation: fadeInRight 1s ease;
+    }
 
-        nav a:hover {
-            color: #898989;
-        }
+    .header-nav a {
+      position: relative;
+      text-decoration: none;
+      font-weight: 500;
+      color: #ffffff;
+      transition: color 0.3s ease;
+      padding: 4px 0;
+      font-size: 1rem;
+    }
 
-        .services-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 40px 20px;
-            gap: 20px;
-            flex: 1;
-        }
+    .header-nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      height: 2px;
+      width: 0%;
+      background: linear-gradient(to right, rgb(157, 0, 255), rgb(255, 0, 251));
+      transition: width 0.4s ease;
+    }
 
-        .service-card {
-            background: rgba(255, 255, 255, 0.07);
-            border-radius: 12px;
-            padding: 25px;
-            width: 300px;
-            text-align: center;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    .header-nav a:hover::after {
+      width: 100%;
+    }
 
-        .service-card:hover {
-            transform: translateY(-10px) scale(1.03);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
-        }
+    .header-nav a:hover {
+      color: rgb(157, 0, 255);
+    }
 
-        .service-card h2 {
-            color: #ffffff;
-            margin-bottom: 12px;
-            font-size: 1.4rem;
-        }
+    .container {
+      max-width: 1300px;
+      margin: auto;
+      padding: 60px 30px;
+    }
+/* 
+    h1 {
+        text-align: center;
+      font-size: 3rem;
+      margin-bottom: 50px;
+      animation: fadeSlideUp 1s ease;
+    } */
 
-        .service-card p {
-            font-size: 15px;
-            color: #d0d0d0;
-        }
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 50px;
+  background: linear-gradient(90deg, #e100ff, #7700ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(238, 0, 255, 0.6),
+               0 0 20px rgba(119, 0, 255, 0.5),
+               0 0 30px rgba(157, 0, 255, 0.3);
+  animation: fadeSlideUp 1s ease;
+}
 
-        .home-btn {
-            display: inline-block;
-            padding: 10px 16px;
-            background-color: #000000;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: background-color 0.3s ease;
-            text-align: center;
-            margin: 30px auto;
-        }
 
-        .home-btn:hover {
-            background-color: #2d0076;
-        }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #0f0028;
-            color: white;
-            margin-top: auto;
-        }
+    .service-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      position: relative;
+      isolation: isolate;
+      animation: fadeSlideUp 1s ease;
+    }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .services-container {
-                padding: 20px 10px;
-            }
+    .service-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 0, 255, 0.4), 0 0 40px rgba(119, 0, 255, 0.3);
+    }
 
-            .service-card {
-                width: 90%;
-            }
 
-            h1 {
-                font-size: 2rem;
-            }
 
-            nav a {
-                display: inline-block;
-                margin: 8px;
-                font-size: 16px;
-            }
-        }
+    .service-card:hover::before {
+      left: 130%;
+    }
 
-        @media (max-width: 480px) {
-            nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+    .service-card h2 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
 
-            nav a {
-                margin: 6px 10px;
-                font-size: 15px;
-            }
+    .service-card p {
+      font-size: 1rem;
+      color: #cccccc;
+    }
 
-            .service-card {
-                padding: 20px 15px;
-            }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: linear-gradient(90deg, rgb(238, 0, 255), #7700ff);
+      color: white;
+      font-size: 14px;
+      margin-top: 60px;
+      animation: fadeSlideUp 1.5s ease;
+    }
 
-            .service-card h2 {
-                font-size: 1.2rem;
-            }
+    /* Animations */
+    @keyframes fadeSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-            .service-card p {
-                font-size: 14px;
-            }
-        }
-    </style>
+    @keyframes fadeInLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      0% {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.3rem;
+      }
+
+      .header-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .header-nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+      }
+    }
+
+    /* Shrink Header Effect */
+.header {
+  transition: all 0.3s ease;
+}
+
+.header.shrink {
+  padding: 4px 5px;
+}
+
+.header.shrink .header-title {
+  font-size: 1.6rem;
+}
+
+.header.shrink .header-nav a {
+  font-size: 0.9rem;
+}
+
+  </style>
 </head>
-
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1>My Services</h1>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="about.html">About Me</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+  <!-- Header -->
+  <div class="header-section header">
+    <div class="header-container">
+      <h1 class="header-title">SERVICES</h1>
+      <nav class="header-nav">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
 
-    <!-- Services Section -->
-    <section class="services-container">
-        <div class="service-card">
-            <h2>Full-Stack Web Development</h2>
-            <p>Building responsive and interactive web apps using HTML, CSS, JavaScript, and Java.</p>
-        </div>
+  <!-- Services Section -->
+  <div class="container">
+    <h1>What I Offer</h1>
+    <div class="services">
+      <div class="service-card" style="animation-delay: 0.2s;">
+        <h2>Full-Stack Web Development</h2>
+        <p>Building responsive and interactive web apps using HTML, CSS, JavaScript, and Java.</p>
+      </div>
 
-        <div class="service-card">
-            <h2>REST API Integration</h2>
-            <p>Creating and integrating RESTful APIs for dynamic frontend and backend interactions.</p>
-        </div>
+      <div class="service-card" style="animation-delay: 0.4s;">
+        <h2>REST API Integration</h2>
+        <p>Creating and integrating RESTful APIs for dynamic frontend and backend interactions.</p>
+      </div>
 
-        <div class="service-card">
-            <h2>Database Design</h2>
-            <p>Designing MySQL/MongoDB databases with robust structures and optimized queries.</p>
-        </div>
+      <div class="service-card" style="animation-delay: 0.6s;">
+        <h2>Database Design</h2>
+        <p>Designing MySQL/MongoDB databases with robust structures and optimized queries.</p>
+      </div>
 
-        <div class="service-card">
-            <h2>UI/UX Prototyping</h2>
-            <p>Designing intuitive interfaces in Figma — wireframes to final UI designs.</p>
-        </div>
+      <div class="service-card" style="animation-delay: 0.8s;">
+        <h2>UI/UX Prototyping</h2>
+        <p>Designing intuitive interfaces in Figma — wireframes to final UI designs.</p>
+      </div>
 
-        <div class="service-card">
-            <h2>Code Collaboration</h2>
-            <p>Managing repositories and contributions using Git and GitHub workflows.</p>
-        </div>
+      <div class="service-card" style="animation-delay: 1s;">
+        <h2>Code Collaboration</h2>
+        <p>Managing repositories and contributions using Git and GitHub workflows.</p>
+      </div>
 
-        <div class="service-card">
-            <h2>Security Awareness</h2>
-            <p>Cybersecurity fundamentals, preparing for ethical hacking and bug bounty skills.</p>
-        </div>
-    </section>
+      <div class="service-card" style="animation-delay: 1.2s;">
+        <h2>Security Awareness</h2>
+        <p>Cybersecurity fundamentals, preparing for ethical hacking and bug bounty skills.</p>
+      </div>
+    </div>
+  </div>
 
-    <!-- Footer Section -->
-    <footer>
-        © 2025 Saif | Aspiring Full-Stack Developer & Cybersecurity Learner
-    </footer>
+  <!-- Footer -->
+  <footer>
+    © 2025 Saif | Full-Stack Developer & Future Ethical Hacker
+  </footer>
+
+  <script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector(".header");
+    if (window.scrollY > 50) {
+      header.classList.add("shrink");
+    } else {
+      header.classList.remove("shrink");
+    }
+  });
+</script>
 
 </body>
-
 </html>
